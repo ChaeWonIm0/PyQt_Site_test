@@ -2,6 +2,8 @@ import sys
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
+from PyQt5 import uic
+
 import random
 class MyApp(QWidget):
 
@@ -10,6 +12,10 @@ class MyApp(QWidget):
 
         self.random_x = 1
         self.random_y = 1
+        
+
+      
+
         self.initUI()
 
     def initUI(self):
@@ -27,11 +33,19 @@ class MyApp(QWidget):
         self.scorelabel = QLabel(str(self.scoretext), self)
         self.scorelabel.move(250, 0)
 
-        self.setWindowTitle('event handler')
+        self.setWindowTitle('Catch the squirral')
         self.setGeometry(0, 0, 2780, 1670)
         self.timer = QBasicTimer()
         self.onActivated()
+        
         self.show()
+
+    def loadImage(self):   
+        # squirrel summit
+        self.pixmap = QPixmap('squirrel.jpg')
+        self.monster_img = QLabel()
+        self.monster_img.setPixmap(self.pixmap)
+        self.monster_img.move(self.random_x, self.random_y)
 
     def paintEvent(self, e):
         qp = QPainter()
@@ -55,8 +69,9 @@ class MyApp(QWidget):
         self.timer.stop()
         self.resolution = 1
         self.setWindowTitle('event handler')
+        #self.loadimage()
         self.setGeometry(600, 500, 1000, 1000)
-        self.timer.start(500, self)
+        self.timer.start(300, self)
 
     def mouseMoveEvent(self, e):
         x = e.x()

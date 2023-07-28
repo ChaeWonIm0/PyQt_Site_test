@@ -10,7 +10,7 @@
 - tool : Visual studio 2022, Pyqt5, C++
 
 <br>
-
+C:\Users\юсц╓©Ь\Source\Repos\PyQt_Site_test\catch.mp4
 
 <br>
 '''
