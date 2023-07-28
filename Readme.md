@@ -1,16 +1,19 @@
 
-### PyQt5 Å×½ºÆ® ¾îÇÃ¸®ÄÉÀÌ¼Ç
+### PyQt5 í…ŒìŠ¤íŠ¸ ì–´í”Œë¦¬ì¼€ì´ì…˜
 
-### °æ·Î : Source/repos/PyQt_Site_test
+### ê²½ë¡œ : Source/repos/PyQt_Site_test
 
-### ½ÃÀÛ³¯Â¥ : 2023_07_28
+### ì‹œì‘ë‚ ì§œ : 2023_07_28
 
-### »ç¿ëÇÑ ¾ğ¾î : Python3
+### ì‚¬ìš©í•œ ì–¸ì–´ : Python3
 
 - tool : Visual studio 2022, Pyqt5, C++
 
 <br>
-C:\Users\ÀÓÃ¤¿ø\Source\Repos\PyQt_Site_test\catch.mp4
+
+(catch game)
+https://github.com/ChaeWonIm0/PyQt_Site_test/assets/114221089/554f4165-d7e7-408e-bac5-3835161bf4ee
+
 
 <br>
 '''
