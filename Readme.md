@@ -13,10 +13,7 @@
 
 (catch game)
 
-
-
-https://github.com/ChaeWonIm0/PyQt_Site_test/assets/114221089/42f7d633-32ed-45f7-84af-efd64f9037bb
-
+https://github.com/ChaeWonIm0/PyQt_Site_test/assets/114221089/c0a3337e-6ce4-4503-8bbb-cc4b27c918e3
 
 
 <br>
