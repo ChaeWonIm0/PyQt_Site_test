@@ -12,7 +12,11 @@
 <br>
 
 (catch game)
-https://github.com/ChaeWonIm0/PyQt_Site_test/assets/114221089/554f4165-d7e7-408e-bac5-3835161bf4ee
+
+
+
+https://github.com/ChaeWonIm0/PyQt_Site_test/assets/114221089/42f7d633-32ed-45f7-84af-efd64f9037bb
+
 
 
 <br>
