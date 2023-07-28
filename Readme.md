@@ -8,6 +8,8 @@
 ### 사용한 언어 : Python3
 
 - tool : Visual studio 2022, Pyqt5, C++
+
+<br>
 '''
 Qt is set of cross-platform C++ libraries that implement high-level APIs for
 accessing many aspects of modern desktop and mobile systems.  These include
