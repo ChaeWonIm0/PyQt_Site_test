@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\catch_game"
   ],
-  "SelectedNode": "\\C:\\Users\\임채원\\Source\\Repos\\PyQt_Site_test",
+  "SelectedNode": "\\catch_game\\MouseCatch_game.py",
   "PreviewInSolutionExplorer": false
 }
