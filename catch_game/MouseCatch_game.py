@@ -13,12 +13,13 @@ class MyApp(QWidget):
         self.random_x = 1
         self.random_y = 1
         
-
+        self.loadImage()
      
 
         self.initUI()
 
     def initUI(self):
+
         x = 0
         y = 0
 
@@ -33,7 +34,6 @@ class MyApp(QWidget):
         self.scorelabel = QLabel(str(self.scoretext), self)
         self.scorelabel.move(250, 0)
 
-        self.loadImage()
         
         self.setWindowTitle('Catch the squirral')
         self.setGeometry(0, 0, 2780, 1670)
@@ -43,12 +43,10 @@ class MyApp(QWidget):
         self.show()
 
     def loadImage(self):   
-        # squirrel summit
+        #squirrel summit
         self.monster_img = QLabel(self)
-        self.pixmap = QPixmap('squirrel.jpg')
-        self.monster_img.setPixmap(self.pixmap)
-        #self.monster_img.move(self.random_x, self.random_y)
-        self.monster_img.move(100, 100)
+        self.monster_img.setPixmap(QPixmap('C:\github\squirrel.png').scaled(110,50))
+        self.monster_img.move(self.random_x, self.random_y)
 
     def paintEvent(self, e):
         qp = QPainter()
@@ -58,21 +56,20 @@ class MyApp(QWidget):
 
     def drawRect(self ,qp):
         qp.setBrush(QColor(255, 0, 0, 1290))
-        qp.setPen(QPen(QColor(255, 0, 0), 2))
-        qp.drawRect(self.random_x, self.random_y, 50, 50)
+        qp.drawRect(self.random_x, self.random_y, 100, 40)
+        
     
     def timerEvent(self, argEvent):
         del argEvent
         self.random_x  = random.randint(0, 500)
         self.random_y  = random.randint(0, 500)
-
+        self.monster_img.move(self.random_x, self.random_y)
         self.repaint()
 
     def onActivated(self):
         self.timer.stop()
         self.resolution = 1
         self.setWindowTitle('event handler')
-        self.loadImage()
         self.setGeometry(600, 500, 1000, 1000)
         self.timer.start(300, self)
 
@@ -84,10 +81,12 @@ class MyApp(QWidget):
         self.label.setText(text)
         self.label.setStyleSheet("color : black;"
                                  "font-size: 30px;")
-        if x <= self.random_x+50 and x >= self.random_x and y <= self.random_y+50 and y >= self.random_y:
+        if x <= self.random_x + 120 and x >= self.random_x and y <= self.random_y + 60 and y >= self.random_y:
             self.score += 10
             self.scoretext = f'score : {self.score}'
-            pass
+            self.scorelabel.setText(self.scoretext)
+            self.scorelabel.adjustSize()
+            
         else:
             pass
         
