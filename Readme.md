@@ -13,8 +13,13 @@
 
 (catch game)
 
-https://github.com/ChaeWonIm0/PyQt_Site_test/assets/114221089/c0a3337e-6ce4-4503-8bbb-cc4b27c918e3
 
+
+https://github.com/ChaeWonIm0/PyQt_Site_test/assets/114221089/d0e16e82-0e4c-4109-b628-b1cb9edead28
+
+
+<br>
+- 2023.08.03 수정
 
 <br>
 '''
