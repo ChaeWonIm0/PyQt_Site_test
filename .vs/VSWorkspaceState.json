@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
+    "\\basic",
     "\\catch_game"
   ],
-  "SelectedNode": "\\catch_game\\MouseCatch_game.py",
+  "SelectedNode": "\\basic\\drawLine.py",
   "PreviewInSolutionExplorer": false
 }

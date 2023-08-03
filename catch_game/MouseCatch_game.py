@@ -14,7 +14,7 @@ class MyApp(QWidget):
         self.random_y = 1
         
 
-      
+     
 
         self.initUI()
 
@@ -33,6 +33,8 @@ class MyApp(QWidget):
         self.scorelabel = QLabel(str(self.scoretext), self)
         self.scorelabel.move(250, 0)
 
+        self.loadImage()
+        
         self.setWindowTitle('Catch the squirral')
         self.setGeometry(0, 0, 2780, 1670)
         self.timer = QBasicTimer()
@@ -42,10 +44,11 @@ class MyApp(QWidget):
 
     def loadImage(self):   
         # squirrel summit
+        self.monster_img = QLabel(self)
         self.pixmap = QPixmap('squirrel.jpg')
-        self.monster_img = QLabel()
         self.monster_img.setPixmap(self.pixmap)
-        self.monster_img.move(self.random_x, self.random_y)
+        #self.monster_img.move(self.random_x, self.random_y)
+        self.monster_img.move(100, 100)
 
     def paintEvent(self, e):
         qp = QPainter()
@@ -54,7 +57,7 @@ class MyApp(QWidget):
         qp.end()
 
     def drawRect(self ,qp):
-        qp.setBrush(QColor(255, 0, 0))
+        qp.setBrush(QColor(255, 0, 0, 1290))
         qp.setPen(QPen(QColor(255, 0, 0), 2))
         qp.drawRect(self.random_x, self.random_y, 50, 50)
     
@@ -69,7 +72,7 @@ class MyApp(QWidget):
         self.timer.stop()
         self.resolution = 1
         self.setWindowTitle('event handler')
-        #self.loadimage()
+        self.loadImage()
         self.setGeometry(600, 500, 1000, 1000)
         self.timer.start(300, self)
 
@@ -91,7 +94,6 @@ class MyApp(QWidget):
         self.scorelabel.setText(self.scoretext)
         self.scorelabel.setStyleSheet("color : black;"
                                  "font-size: 30px;")
-
         self.label.adjustSize()
         self.scorelabel.adjustSize()
 
