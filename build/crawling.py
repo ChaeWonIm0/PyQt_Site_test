@@ -2,6 +2,7 @@ import sys
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
+import os
 import requests
 from bs4 import BeautifulSoup
 
@@ -21,7 +22,7 @@ class MyApp(QWidget):
 		self.marketSumLabel = QLabel('Market cap : - won', self)
 		self.marketSumLabel.move(50, 110)
 
-		self.marketSumRankLabel = QLabel('Market capitalization rank : powernex - st', self)
+		self.marketSumRankLabel = QLabel('Market capitalization rank : naver - st', self)
 		self.marketSumRankLabel.move(50, 140)
 
 		self.currentPrice = QLabel('current Price : - won', self)
@@ -56,14 +57,24 @@ class MyApp(QWidget):
 		quitButton.move(30, 550)
 		quitButton.resize(340, 50)
 		quitButton.clicked.connect(self.close)
-
+		
 		self.representImage = QLabel(self)
-		self.representImage.setPixmap(QPixmap('/squirrel.jpg').scaled(50, 24))
-		self.representImage.move(10, 10)
+		self.representImage.setPixmap(QPixmap('img/cat.png').scaled(35,44))
+		self.representImage.move(5, 5)
 
 		self.setWindowTitle('Financial Report')
+		self.setWindowIcon(QIcon('img/cat.png'))
 		self.setGeometry(1000, 300, 500, 640)
+		self.loadImageFromFile()
 		self.show()
+
+
+	def loadImageFromFile(self):
+		self.qPixmapFileVar = QPixmap()
+		self.representImage = QLabel(self)
+		self.qPixmapFileVar.load("cat.png")
+		self.qPixmapFileVar = self.qPixmapFileVar.scaledToWidth(100)
+		self.representImage.setPixmap(self.qPixmapFileVar)
 
 
 	def write(self):
@@ -84,16 +95,20 @@ class MyApp(QWidget):
 		self.currentPrice.setText(f'current Price : {values[3].text}')
 		self.currentPrice.resize(400, 20)
 
-		s = values[4].text.strip().replace('\n', '').split('1')
-		self.maxMinPrice.setText(f'52week max | 52week min : {s[0]} | {s[1]}')
-		self.maxMinPrice.rexize(400, 20)
-
 		i = values[5].text.strip()
 		self.odds.setText(f'Odds : {i}')
 		self.odds.resize(400, 20)
 
+		s = values[4].text.strip().replace('\n', '').split('l')
+		self.maxMinPrice.setText(f'52max | 52MinPrice : {s[0]} | {s[1]}')
+		self.maxMinPrice.resize(400, 20)
+
+		
+
 		self.netProfit.setText(f'Sales/Cost/Profits : \n{values[6].text}\n / {values[7].text}\n / {values[8].text}')
 		self.netProfit.resize(400, 80)
+
+		
 
 	def excel(self):
 		pass
@@ -107,15 +122,4 @@ app = QApplication(sys.argv)
 ex = MyApp()
 app.exec_()
 
-
-
-
-
-
-
-
-
-		
-		
-		
 
