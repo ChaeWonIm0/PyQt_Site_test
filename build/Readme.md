@@ -1,4 +1,6 @@
-#### ½ÇÇà È­¸é
+### ì‹¤í–‰í™”ë©´
 
+![image](https://github.com/ChaeWonIm0/PyQt_Site_test/assets/114221089/8ed24ef1-a0f1-4356-adf5-556882dfa2df)
 
-- ±×¸² Ãß°¡ ¿¹Á¤
+- 23.08.03 ìˆ˜ì •
+- ê·¸ë¦¼ ì¶”ê°€ ì˜ˆì •
