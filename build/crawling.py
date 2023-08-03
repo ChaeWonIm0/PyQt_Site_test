@@ -62,13 +62,10 @@ class MyApp(QWidget):
 		quitButton.move(30, 550)
 		quitButton.resize(340, 50)
 		quitButton.clicked.connect(self.close)
-		
-		self.representImage = QLabel(self)
-		self.representImage.setPixmap(QPixmap('img/cat.png').scaled(35,44))
-		self.representImage.move(5, 5)
+	
 
 		self.setWindowTitle('Financial Report')
-		self.setWindowIcon(QIcon('img/cat.png'))
+		self.setWindowIcon(QIcon('C:\github\cat.png'))
 		self.setGeometry(1000, 300, 600, 640)
 		self.show()
 
