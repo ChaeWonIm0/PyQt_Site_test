@@ -15,9 +15,14 @@ class MyApp(QWidget):
 
 
 	def initUI(self):
-		self.titleLabel = QLabel('squirrel.Inc', self)
-		self.titleLabel.move(50, 50)
-		self.titleLabel.setFont(QFont('Helvetica', pointSize = 9, weight = 2))
+
+		self.img = QLabel(self)
+		self.img.setPixmap(QPixmap('C:\github\cat.png').scaled(50,60))
+		self.img.move(10, 10)
+
+		self.titleLabel = QLabel('Angry Cat.Inc', self)
+		self.titleLabel.move(40, 60)
+		self.titleLabel.setFont(QFont('Helvetica', pointSize = 10, weight = 2))
 
 		self.marketSumLabel = QLabel('Market cap : - won', self)
 		self.marketSumLabel.move(50, 110)
@@ -64,17 +69,15 @@ class MyApp(QWidget):
 
 		self.setWindowTitle('Financial Report')
 		self.setWindowIcon(QIcon('img/cat.png'))
-		self.setGeometry(1000, 300, 500, 640)
-		self.loadImageFromFile()
+		self.setGeometry(1000, 300, 600, 640)
 		self.show()
 
-
-	def loadImageFromFile(self):
-		self.qPixmapFileVar = QPixmap()
-		self.representImage = QLabel(self)
-		self.qPixmapFileVar.load("cat.png")
-		self.qPixmapFileVar = self.qPixmapFileVar.scaledToWidth(100)
-		self.representImage.setPixmap(self.qPixmapFileVar)
+	#def loadImageFromFile(self):
+	#	self.qPixmapFileVar = QPixmap()
+	#	self.representImage = QLabel(self)
+	#	self.qPixmapFileVar.load("cat.png")
+	#	self.qPixmapFileVar = self.qPixmapFileVar.scaledToWidth(100)
+	#	self.representImage.setPixmap(self.qPixmapFileVar)
 
 
 	def write(self):

@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\basic",
+    "\\build",
     "\\catch_game"
   ],
-  "SelectedNode": "\\basic\\drawLine.py",
+  "SelectedNode": "\\build\\cat.png",
   "PreviewInSolutionExplorer": false
 }
